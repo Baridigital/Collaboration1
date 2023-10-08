@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     /*background-color: #819eee;*/
     font-family: Arial, sans-serif;
@@ -8,33 +13,73 @@ body {
 h1, h2{
     text-align: center;
     font-family: Tahoma;
-    
     font-display: block;
 }
-.navflexbox{
-    display: flex;
-    justify-content: space-between; /* Horizontal alignment */
-    align-items: center; /* Vertical alignment */
-    height: 30px; /* Set a height for the container */
-    width: 50%;
-    padding: 10px;
+.nav-brand {
+    text-decoration: none;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px #fff;
+    line-height: 2.5;
+    margin-left: 25px;
+    font-size: 20px;
 }
-.flex_item{
-    flex: 1; /* Allow items to grow and shrink equally */
-    padding: 10px;
+.navflexbox{
+    background-color: #3498db;
+    display: flex;
+    /* justify-content: space-between;  */
+    /* Horizontal alignment */
+    /* align-items: center;  */
+    /* Vertical alignment */
+    /* height: 30px;  */
+    /* Set a height for the container */
+    /* width: 50%; */
+    /* padding: 10px; */
+}
+.flex_item a{
+    font-weight: bold;
     background-color: #3498db;
     color: #fff;
-    text-align: center;
-    border-color: black;
-    border-width: solid;
-    margin: 0px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 12px;
+    line-height: 2;
+    transition: color 2s, background-color 2s;
 }
-.flex_item:hover{
-    color: rgb(192, 188, 188);
-    background-color:aqua;
+.flex_item a:hover{
+    color: black;
+    /* text-decoration: none; */
+    background-color:#3aa8f1;
 }
+ul {
+    margin-left: auto;
+}
+
+li:last-child {
+    margin-right: 20px;
+}
+
+.flex_item{
+    
+    display: inline;
+    
+    /* Allow items to grow and shrink equally */
+    /* flex: 1;  */
+    
+    /* background-color: #3498db; */
+    /* color: #fff; */
+    /* text-align: center; */
+    /* border-color: black; */
+    /* border-width: solid; */
+    /* margin: none; */
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    /* font-weight: bold; */
+}
+/* .flex_item:hover{
+    color: rgb(0, 0, 0);
+    
+} */
 @keyframes textAnimation {
     0% {
         
@@ -55,13 +100,14 @@ h1, h2{
         cursor: pointer;
         animation-delay: 10ms;
         animation-iteration-count: 2;
+        padding-block: 16px;
 }
-a:link{
+/* a:link{
     color: white;
-}
-a:visited{
+} */
+/* a:visited{
     color: rgb(198, 253, 47);
-}
+} */
 .container {
     display: flex;
     justify-content: space-around;
